@@ -11,7 +11,6 @@ const config = {
 		},
 		prerender: {
       			handleHttpError: 'warn', // Prevents build failure
-      			fallback: '200.html'     // Allows fallback for non-prerendered pages
 	    	}
 	}
 };
