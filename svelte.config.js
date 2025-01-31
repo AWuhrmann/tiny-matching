@@ -8,7 +8,11 @@ const config = {
 		}),
 		paths: {
 			base: '/tiny-matching'
-		}
+		},
+		prerender: {
+      			handleHttpError: 'warn', // Prevents build failure
+      			fallback: '200.html'     // Allows fallback for non-prerendered pages
+	    	}
 	}
 };
 
