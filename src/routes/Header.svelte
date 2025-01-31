@@ -1,132 +1,48 @@
-<script lang="ts">
-	import { page } from '$app/state';
-	import logo from '$lib/images/svelte-logo.svg';
-	import github from '$lib/images/github.svg';
-
-	import { base } from '$app/paths';
-
+<!-- +page.svelte -->
+<script>
+  // Your script logic here
 </script>
 
-<header>
-	<div class="corner">
-		<a href="https://svelte.dev/docs/kit">
-			<img src={logo} alt="SvelteKit" />
-		</a>
-	</div>
+<main class="min-h-screen bg-gray-50">
+  <!-- Hero Section -->
+  <section class="py-16 px-4 md:px-8">
+    <div class="max-w-4xl mx-auto">
+      <h1 class="text-4xl font-bold text-gray-900 mb-4">Project Title</h1>
+      <p class="text-lg text-gray-600">A brief description of your amazing project goes here.</p>
+    </div>
+  </section>
 
-	<nav>
-		<svg viewBox="0 0 2 3" aria-hidden="true">
-			<path d="M0,0 L1,2 C1.5,3 1.5,3 2,3 L2,0 Z" />
-		</svg>
-		<ul>
-			<li aria-current={page.url.pathname === '/' ? 'page' : undefined}>
-				<a href="{base}/">Home</a>
-			</li>
-			<li aria-current={page.url.pathname === '/about' ? 'page' : undefined}>
-				<a href="{base}/about">About</a>
-			</li>
-			<li aria-current={page.url.pathname.startsWith('/sverdle') ? 'page' : undefined}>
-				<a href="{base}/sverdle">Sverdle</a>
-			</li>
-		</ul>
-		<svg viewBox="0 0 2 3" aria-hidden="true">
-			<path d="M0,0 L0,3 C0.5,3 0.5,3 1,2 L2,0 Z" />
-		</svg>
-	</nav>
+  <!-- Main Content -->
+  <section class="py-12 px-4 md:px-8">
+    <div class="max-w-4xl mx-auto">
+      <div class="prose lg:prose-lg">
+        <h2 class="text-2xl font-semibold text-gray-900 mb-6">About the Project</h2>
+        <p class="mb-6">Your detailed project description here. Make it engaging and informative.</p>
 
-	<div class="corner">
-		<a href="https://github.com/sveltejs/kit">
-			<img src={github} alt="GitHub" />
-		</a>
-	</div>
-</header>
+        <!-- Example with highlighted words -->
+        <div class="mb-8">
+          <h3 class="text-xl font-semibold mb-4">Example Usage</h3>
+          <p class="leading-relaxed">
+            Here's how you can 
+            <span class="bg-green-100 text-green-800 rounded-full px-3 py-1">integrate</span> 
+            our solution with your 
+            <span class="bg-green-100 text-green-800 rounded-full px-3 py-1">existing workflow</span>
+            seamlessly.
+          </p>
+        </div>
 
-<style>
-	header {
-		display: flex;
-		justify-content: space-between;
-	}
-
-	.corner {
-		width: 3em;
-		height: 3em;
-	}
-
-	.corner a {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		width: 100%;
-		height: 100%;
-	}
-
-	.corner img {
-		width: 2em;
-		height: 2em;
-		object-fit: contain;
-	}
-
-	nav {
-		display: flex;
-		justify-content: center;
-		--background: rgba(255, 255, 255, 0.7);
-	}
-
-	svg {
-		width: 2em;
-		height: 3em;
-		display: block;
-	}
-
-	path {
-		fill: var(--background);
-	}
-
-	ul {
-		position: relative;
-		padding: 0;
-		margin: 0;
-		height: 3em;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		list-style: none;
-		background: var(--background);
-		background-size: contain;
-	}
-
-	li {
-		position: relative;
-		height: 100%;
-	}
-
-	li[aria-current='page']::before {
-		--size: 6px;
-		content: '';
-		width: 0;
-		height: 0;
-		position: absolute;
-		top: 0;
-		left: calc(50% - var(--size));
-		border: var(--size) solid transparent;
-		border-top: var(--size) solid var(--color-theme-1);
-	}
-
-	nav a {
-		display: flex;
-		height: 100%;
-		align-items: center;
-		padding: 0 0.5rem;
-		color: var(--color-text);
-		font-weight: 700;
-		font-size: 0.8rem;
-		text-transform: uppercase;
-		letter-spacing: 0.1em;
-		text-decoration: none;
-		transition: color 0.2s linear;
-	}
-
-	a:hover {
-		color: var(--color-theme-1);
-	}
-</style>
+        <!-- Features Section -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+          <div class="p-6 bg-white rounded-lg shadow">
+            <h4 class="font-semibold mb-2">Feature 1</h4>
+            <p class="text-gray-600">Description of your first feature.</p>
+          </div>
+          <div class="p-6 bg-white rounded-lg shadow">
+            <h4 class="font-semibold mb-2">Feature 2</h4>
+            <p class="text-gray-600">Description of your second feature.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
