@@ -377,7 +377,7 @@
 				<div class="bg-white p-6 rounded-lg shadow-sm mb-8">
 					<div class="grid grid-cols-2 gap-8 p-8 font-mono">
 						<div class="space-y-4">
-							<h2 class="font-bold mb-4">Original Text</h2>
+							<h2 class="font-bold mb-4">Generated story</h2>
 							<div>
 								Once upon a time, there was a little girl named
 								Lucy. She was three years old and loved to
